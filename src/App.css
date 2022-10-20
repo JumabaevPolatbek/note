@@ -1,0 +1,78 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(122, 122, 122);
+}
+.App{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+h3{
+    text-align: center;
+}
+.todo-input{
+    display: flex;
+}
+.todo-input>input{
+    width: 80%;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+}
+ul{
+    padding-inline-start: 0;
+    list-style-type: none;
+    height: 200px;
+    overflow-y: scroll;
+    padding: 0 5px;
+    background-color: #fff;
+}
+li{
+    display: flex;
+    position: relative;
+    margin: 5px 0;
+    padding: 5px;
+}
+li>.notes-item{
+    width: 100%;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+li:hover,li:hover .notes-item{
+    background-color: rgb(122, 122, 122);
+    text-decoration: underline;
+}
+
+.list-hovered{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+li:hover .list-hovered{
+    opacity: 1;
+}
+button{
+    border: 0;
+    cursor: pointer;
+}
+.list-hovered>button{
+    background-color: purple;
+    color: #fff;
+    padding: 5px;
+    font-size: 16px;
+    height: 100%;
+    
+}
+.btn-hover:not(:first-child){
+    border-left: 1px solid #ccc;
+}
